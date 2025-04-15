@@ -13,7 +13,7 @@ import torch.nn.functional as F
 class FaceParse:
 
 	def __init__(self, base_dir='./', model='ParseNet-latest', device='cuda'):
-		self.mfile = os.path.join(base_dir, 'facerestore_models', model + '.pth')
+		self.mfile = os.path.join(base_dir, 'facedetection', model + '.pth')
 		self.size = 512
 		self.device = device
 		self.MASK_COLORMAP = torch.tensor([0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 255, 255, 255, 0], device=self.device)
